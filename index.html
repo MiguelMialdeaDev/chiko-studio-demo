@@ -34,10 +34,10 @@
     .lineUp > span { display: inline-block; transform: translateY(110%); transition: transform 1.1s cubic-bezier(.16,1,.3,1); }
     .lineUp.in > span { transform: none; }
 
-    .imgmask { clip-path: inset(100% 0 0 0); transition: clip-path 1.2s cubic-bezier(.16,1,.3,1); will-change: clip-path, transform; }
-    .imgmask.in { clip-path: inset(0 0 0 0); }
-    .work img { transition: transform 1s cubic-bezier(.16,1,.3,1); filter: grayscale(0.15); }
-    .work:hover img { transform: scale(1.04); filter: grayscale(0); }
+    .imgmask { overflow: hidden; will-change: transform; }
+    .imgmask img { transition: transform 1.3s cubic-bezier(.16,1,.3,1), filter 1s ease; transform: scale(1.08); filter: grayscale(0.2); }
+    .imgmask.in img { transform: scale(1); }
+    .work:hover .imgmask img { transform: scale(1.04); filter: grayscale(0); }
 
     #cursor { position: fixed; top: 0; left: 0; width: 10px; height: 10px; border-radius: 9999px; background: #1C1814; pointer-events: none; z-index: 100; mix-blend-mode: difference; will-change: transform; }
     /* hace blanco el punto via difference sobre fondo claro -> se ve oscuro */
@@ -105,19 +105,19 @@
       </div>
       <div class="grid sm:grid-cols-2 gap-x-8 gap-y-10">
         <a href="#contacto" class="work block group">
-          <div class="imgmask overflow-hidden aspect-[4/3]" data-parallax="0.04"><img src="https://images.pexels.com/photos/1762851/pexels-photo-1762851.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Proyecto" loading="lazy" class="w-full h-full object-cover" /></div>
+          <div class="imgmask overflow-hidden aspect-[4/3]" data-parallax="0.04"><img src="./img/work-1.jpg" alt="Proyecto de branding" class="w-full h-full object-cover" /></div>
           <div class="flex items-baseline justify-between mt-4"><h3 class="font-display text-2xl">Identidad de marca</h3><span class="text-sm text-muted">Branding</span></div>
         </a>
         <a href="#contacto" class="work block group">
-          <div class="imgmask overflow-hidden aspect-[4/3]" data-parallax="0.04"><img src="https://images.pexels.com/photos/6444/pencil-typography-black-design.jpg?auto=compress&cs=tinysrgb&w=900" alt="Proyecto" loading="lazy" class="w-full h-full object-cover" /></div>
+          <div class="imgmask overflow-hidden aspect-[4/3]" data-parallax="0.04"><img src="./img/work-2.jpg" alt="Dirección de arte" class="w-full h-full object-cover" /></div>
           <div class="flex items-baseline justify-between mt-4"><h3 class="font-display text-2xl">Dirección de arte</h3><span class="text-sm text-muted">Diseño</span></div>
         </a>
         <a href="#contacto" class="work block group">
-          <div class="imgmask overflow-hidden aspect-[4/3]" data-parallax="0.04"><img src="https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Proyecto" loading="lazy" class="w-full h-full object-cover" /></div>
+          <div class="imgmask overflow-hidden aspect-[4/3]" data-parallax="0.04"><img src="./img/work-3.jpg" alt="Packaging" class="w-full h-full object-cover" /></div>
           <div class="flex items-baseline justify-between mt-4"><h3 class="font-display text-2xl">Packaging</h3><span class="text-sm text-muted">Producto</span></div>
         </a>
         <a href="#contacto" class="work block group">
-          <div class="imgmask overflow-hidden aspect-[4/3]" data-parallax="0.04"><img src="https://images.pexels.com/photos/196645/pexels-photo-196645.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Proyecto" loading="lazy" class="w-full h-full object-cover" /></div>
+          <div class="imgmask overflow-hidden aspect-[4/3]" data-parallax="0.04"><img src="./img/work-4.jpg" alt="Sitio web" class="w-full h-full object-cover" /></div>
           <div class="flex items-baseline justify-between mt-4"><h3 class="font-display text-2xl">Sitio web</h3><span class="text-sm text-muted">Digital</span></div>
         </a>
       </div>
